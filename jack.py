@@ -12,7 +12,7 @@ from pyquery import PyQuery
 from lxml import etree
 
 for i in range(1,2):
-    url = 'http://www.e-to-china.com.cn/member/view.php?userid=%d' % (i)
+    url = 'http://www.baidu.com.cn/member/view.php?userid=%d' % (i)
     page = urllib2.urlopen(url)
     html = page.read()
     #查找<td></td>的内容
