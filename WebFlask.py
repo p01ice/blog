@@ -68,9 +68,9 @@ def internal_server_error(e):
 def upload():
     if request.method == 'POST':
         f = request.files['file']
-        basepath = path.abspath(path.dirname('__file__'))
-        upload_path = path.join(basepath,'static/upload')
-        f.save(upload_path,secure_filename(f.filename))
+        basepath = path.abspath(path.dirname(__file__))
+        upload_path = path.join(basepath,'static/upload/')
+        f.save(upload_path+secure_filename(f.filename))
         return redirect(url_for('upload'))
     return render_template('upload.html')
 
